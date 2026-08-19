@@ -1,0 +1,506 @@
+/* =========================================================
+   O GRANDE JORNAL
+   CSS RESPONSIVO — PC, TABLET E CELULAR
+   ========================================================= */
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #d8d5cc;
+    color: #171717;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+/* ---------- CONTAINER PRINCIPAL ---------- */
+
+.jornal {
+    width: 92%;
+    max-width: 1200px;
+    margin: 25px auto;
+    background-color: #f4f0e6;
+    padding: 25px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- CABEÇALHO ---------- */
+
+header {
+    text-align: center;
+    border-top: 5px solid #111;
+    border-bottom: 4px double #111;
+    padding: 15px 10px 12px;
+}
+
+.nome-jornal {
+    font-size: clamp(2.2rem, 6vw, 5rem);
+    font-weight: 900;
+    letter-spacing: 4px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.subtitulo {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ---------- INFORMAÇÕES DA EDIÇÃO ---------- */
+
+.edicao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #222;
+    padding: 8px 0;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+/* ---------- MENU ---------- */
+
+nav {
+    border-bottom: 3px solid #111;
+    margin-bottom: 25px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 10px 16px;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    background-color: #111;
+    color: #f4f0e6;
+}
+
+/* ---------- MANCHETE ---------- */
+
+.manchete {
+    text-align: center;
+    border-bottom: 2px solid #111;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.categoria {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.manchete h1 {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: clamp(2.2rem, 6vw, 5rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.linha-fina {
+    max-width: 850px;
+    margin: 15px auto 0;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-style: italic;
+}
+
+/* ---------- LAYOUT DAS NOTÍCIAS ---------- */
+
+.noticias {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+/* ---------- MATÉRIA PRINCIPAL ---------- */
+
+.materia-principal {
+    border-right: 1px solid #555;
+    padding-right: 25px;
+}
+
+.materia-principal h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.7rem, 4vw, 2.7rem);
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.autor {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.materia-principal p {
+    font-size: 1.05rem;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* ---------- DESTAQUE / CITAÇÃO ---------- */
+
+.destaque {
+    border-top: 3px solid #111;
+    border-bottom: 3px solid #111;
+    margin: 20px 0;
+    padding: 15px 5px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* ---------- IMAGENS ---------- */
+
+.imagem-materia {
+    width: 100%;
+    margin: 15px 0;
+    display: block;
+    filter: grayscale(100%);
+}
+
+.legenda {
+    font-size: 0.75rem;
+    font-style: italic;
+    border-bottom: 1px solid #555;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* ---------- COLUNA LATERAL ---------- */
+
+.lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bloco {
+    border-top: 3px solid #111;
+    padding-top: 10px;
+}
+
+.bloco h3 {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.bloco p {
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
+.bloco a {
+    color: #111;
+    font-weight: bold;
+}
+
+/* ---------- BOTÃO ---------- */
+
+.botao {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #111;
+    color: #f4f0e6;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    transition: 0.2s;
+}
+
+.botao:hover {
+    background-color: #444;
+}
+
+/* ---------- OUTRAS NOTÍCIAS ---------- */
+
+.outras-noticias {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 4px double #111;
+}
+
+.outras-noticias h2 {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.grid-noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border-top: 2px solid #111;
+    padding-top: 10px;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    line-height: 1.15;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+/* ---------- RODAPÉ ---------- */
+
+footer {
+    border-top: 4px double #111;
+    margin-top: 35px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .jornal {
+        width: 95%;
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .noticias {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 20px;
+    }
+
+    .materia-principal {
+        padding-right: 20px;
+    }
+
+    .grid-noticias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav a {
+        padding: 9px 11px;
+        font-size: 0.8rem;
+    }
+}
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    body {
+        background-color: #f4f0e6;
+    }
+
+    .jornal {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    /* Cabeçalho */
+
+    header {
+        padding: 12px 5px;
+    }
+
+    .nome-jornal {
+        font-size: clamp(2rem, 12vw, 3.5rem);
+        letter-spacing: 2px;
+    }
+
+    .subtitulo {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+
+    /* Edição */
+
+    .edicao {
+        flex-direction: column;
+        text-align: center;
+        gap: 3px;
+        font-size: 0.7rem;
+    }
+
+    /* Menu */
+
+    nav {
+        margin-bottom: 18px;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav a {
+        text-align: center;
+        border-bottom: 1px solid #777;
+        padding: 9px 5px;
+        font-size: 0.72rem;
+    }
+
+    /* Manchete */
+
+    .manchete {
+        padding-bottom: 15px;
+        margin-bottom: 18px;
+    }
+
+    .categoria {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+
+    .manchete h1 {
+        font-size: clamp(2rem, 12vw, 3.5rem);
+    }
+
+    .linha-fina {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    /* Notícias */
+
+    .noticias {
+        display: block;
+    }
+
+    .materia-principal {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .materia-principal h2 {
+        font-size: 1.8rem;
+    }
+
+    .materia-principal p {
+        font-size: 0.98rem;
+        line-height: 1.55;
+    }
+
+    /* Lateral */
+
+    .lateral {
+        margin-top: 25px;
+    }
+
+    .bloco h3 {
+        font-size: 1.3rem;
+    }
+
+    .bloco p {
+        font-size: 0.9rem;
+    }
+
+    /* Outras notícias */
+
+    .grid-noticias {
+        grid-template-columns: 1fr;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Botão */
+
+    .botao {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    /* Rodapé */
+
+    footer {
+        margin-top: 25px;
+        font-size: 0.7rem;
+    }
+}
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .jornal {
+        padding: 10px;
+    }
+
+    .nome-jornal {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav a {
+        font-size: 0.65rem;
+    }
+
+    .manchete h1 {
+        font-size: 2rem;
+    }
+
+    .materia-principal h2 {
+        font-size: 1.5rem;
+    }
+}
